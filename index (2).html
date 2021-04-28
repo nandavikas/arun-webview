@@ -1,0 +1,31 @@
+<head>
+	<!-- Load plotly.js into the DOM -->
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+</head>
+
+<body>
+	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+		<script>
+var trace1 = {
+  x: ['China', 'USA', 'Europe','SEA','APJ'],
+  y: [25, 169, 118,134,132],
+  name: 'Male',
+  type: 'bar'
+};
+
+var trace2 = {
+  x: ['China', 'USA', 'Europe','SEA','APJ'],
+  y: [24, 144, 116,109,129],
+  name: 'Female',
+  type: 'bar'
+};
+
+var data = [trace1, trace2];
+
+var layout = {barmode: 'stack'};
+
+Plotly.newPlot('myDiv', data, layout);
+
+</script>
+</body>
